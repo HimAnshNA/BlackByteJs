@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Sandbox by HimAnshNA</title>
   <script src="https://cdn.tailwindcss.com"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -289,6 +295,12 @@ button:active::after {
   text-shadow: 0.025em 0.25em 0.05em rgba(0, 0, 0, 0.12);
 }
 
+.socialText{
+width: 37%;
+text-align: end;
+
+}
+
   </style>
 </head>
 <body class="p-4 sm:p-8">
@@ -320,7 +332,42 @@ button:active::after {
     </button>
     <div class="button-shadow"></div>
   </div>
+
+
+
+<div class="socialText text-lg font-semibold text-gray-700 ">Let’s connect</div>
+
+  <div class="button-wrap">
+    <button id="instagram">
+      <span><i class="fa-brands fa-instagram"></i></span>
+    </button>
+    
+    <div class="button-shadow"></div>
+  </div>
+
+
+<div class="button-wrap">
+    <button id="twitter">
+      <span> <i class="fa-brands fa-x-twitter"></i></span>
+    </button>
+    
+    <div class="button-shadow"></div>
+  </div>
+
+  <div class="button-wrap">
+    <button id="github">
+      <span><i class="fa-brands fa-github"></i></span>
+    </button>
+    
+    <div class="button-shadow"></div>
+  </div>
+  
+
+
+
+
 </div>
+
 
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-grow overflow-hidden">
@@ -350,6 +397,10 @@ button:active::after {
       const runButton = document.getElementById('run-button');
       const clearConsoleButton = document.getElementById('clear-console-button');
       const clearEditorButton = document.getElementById('clear-editor-button');
+      const instagram = document.getElementById('instagram');
+      const twitter = document.getElementById('twitter');
+      const github = document.getElementById('github');
+
 
       // 🚫 no default code — keep editor empty
       // editor.value = '...';
@@ -362,6 +413,21 @@ button:active::after {
         editor.value = '';
         editor.focus();
       };
+
+      
+      const openInstagram = () => {
+  window.open("https://www.instagram.com/HimAnshNA", "_blank");
+}
+
+
+      const openGitHub = () => {
+  window.open("https://github.com/himanshna", "_blank");
+}
+
+
+      const openTwitter= () => {
+  window.open("https://x.com/HimAnshNA", "_blank");
+}
 
       const logToConsole = (message, type = 'log') => {
         const line = document.createElement('div');
@@ -461,6 +527,12 @@ const autoRun = () => {
       runButton.addEventListener('click', runCode);
       clearConsoleButton.addEventListener('click', clearConsole);
       clearEditorButton.addEventListener('click', clearEditor);
+      instagram.addEventListener('click',openInstagram);
+      github.addEventListener('click',openGitHub);
+      twitter.addEventListener('click',openTwitter);
+
+
+
 
       editor.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
