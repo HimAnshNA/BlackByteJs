@@ -7,7 +7,7 @@ BlackByte JS is a fast, lightweight, browser-based JavaScript sandbox that allow
 
 Built from scratch using Vanilla JavaScript, HTML, CSS, and Tailwind CSS, this project focuses on performance, usability, and real-world debugging needs — without relying on heavy editors or external compilers.
 
-🚀 Live Demo (Optional)
+🚀 Live Demo
 
 https://himanshna.github.io/BlackByteJs/
 
